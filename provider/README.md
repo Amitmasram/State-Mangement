@@ -13,7 +13,7 @@ For detailed guidance on Flutter development, refer to the [**online documentati
 
 ## Overview
 
-<img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/3a7449a2-d357-4666-8fc3-97205629e09f" alt="Screenshot 1" width="500" />
+<img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/974c5175-02c4-4eb5-bea5-4edbef8e075a" alt="Screenshot 1" width="500" />
 <br/>
 <img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/8d5c6689-1955-4fa3-b75a-ce2b93902667" alt="Screenshot 2" width="500" />
 <br/>
@@ -46,7 +46,8 @@ For detailed guidance on Flutter development, refer to the [**online documentati
    ```bash
    git clone https://github.com/Amitmasram/State-Mangement.git
 Navigate to the project folder:
-   cd State-Mangement
+
+
    
 Install dependencies:
 flutter pub get
