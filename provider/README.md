@@ -21,9 +21,9 @@ For detailed guidance on Flutter development, refer to the [**online documentati
 <br/>
 <img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/c3fadd0d-e962-41f3-b160-188b94044d2c" alt="Screenshot 4" width="500" />
 <br/>
-<img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/a8c4e530-5235-449f-af74-d9912665ec29" alt="Screenshot 5" width="500" />
+<img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/6076589e-4f8b-4988-8330-e006ee422d04" alt="Screenshot 5" width="500" />
 <br/>
-<img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/dda02e1c-97e6-4fa8-aa1b-ada6cadf8424" alt="Screenshot 6" width="500" />
+<img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/9f41a77d-2763-4668-b62f-9ffe3da2a8e3" alt="Screenshot 6" width="500" />
 <br/>
 <img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/4951db62-f5b6-4a82-b4ab-b31019b02af0" alt="Screenshot 7" width="500" />
 <br/>
@@ -46,6 +46,8 @@ For detailed guidance on Flutter development, refer to the [**online documentati
    ```bash
    git clone https://github.com/Amitmasram/State-Mangement.git
 Navigate to the project folder:
+
+
 
 
 
