@@ -25,13 +25,13 @@ For detailed guidance on Flutter development, refer to the [**online documentati
 <br/>
 <img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/9f41a77d-2763-4668-b62f-9ffe3da2a8e3" alt="Screenshot 6" width="500" />
 <br/>
-<img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/4951db62-f5b6-4a82-b4ab-b31019b02af0" alt="Screenshot 7" width="500" />
+<img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/181d20ec-f052-425b-9084-be8ffa77693e" alt="Screenshot 7" width="500" />
 <br/>
-<img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/1e4b1787-fb2b-45e7-aa53-e06bcb893b16" alt="Screenshot 8" width="500" />
+<img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/dfbb83a2-2008-46c0-9a5d-81589ef0fad1" alt="Screenshot 8" width="500" />
 <br/>
-<img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/da42dc02-90a1-4f62-9d2c-b82e83e9a704" alt="Screenshot 9" width="500" />
+<img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/4c654bd2-972e-47df-8ed9-6e23f9c7475d" alt="Screenshot 9" width="500" />
 <br/>
-<img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/6594c2f3-1a2d-4302-bfdc-d496765f31d5" alt="Screenshot 10" width="500" />
+<img src="https://github.com/Amitmasram/State-Mangement/assets/105006236/eb5fb256-b213-4c9a-a45b-c61a0004e7fc" alt="Screenshot 10" width="500" />
 
 ## Features
 
@@ -46,7 +46,6 @@ For detailed guidance on Flutter development, refer to the [**online documentati
    ```bash
    git clone https://github.com/Amitmasram/State-Mangement.git
 Navigate to the project folder:
-
 
 
 
