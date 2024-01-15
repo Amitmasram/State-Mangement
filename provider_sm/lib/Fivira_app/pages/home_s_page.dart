@@ -35,14 +35,14 @@ class _HomePageState extends State<HomePage> {
   Widget _appTitle() {
     return Column(
       children: [
-        Text("Frivia",
+        const Text("Frivia",
             style: TextStyle(
                 color: Colors.white,
                 fontSize: 50,
                 fontWeight: FontWeight.w500)),
         Text(
           _difficultTexts[_currentDifficultyLevel.toInt()],
-          style: TextStyle(
+          style: const TextStyle(
               color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500),
         )
       ],
@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
       color: Colors.blue,
       minWidth: _deviceWidth! * 0.80,
       height: _deviceHeight! * 0.10,
-      child: Text(
+      child: const Text(
         "Start",
         style: TextStyle(color: Colors.white, fontSize: 25),
       ),
