@@ -51,7 +51,7 @@ class GamePageProvider extends ChangeNotifier {
             ),
           );
         });
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
     Navigator.pop(context);
     if (_currentQuestionCount == _maxQustions) {
       endGame();
@@ -67,14 +67,14 @@ class GamePageProvider extends ChangeNotifier {
         builder: (BuildContext _context) {
           return AlertDialog(
             backgroundColor: Colors.blue,
-            title: Text(
+            title: const Text(
               "End Game!",
               style: TextStyle(fontSize: 25, color: Colors.white),
             ),
             content: Text("Score :$_correctCount/$_maxQustions"),
           );
         });
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 3));
     Navigator.pop(context);
     Navigator.pop(context);
   }
