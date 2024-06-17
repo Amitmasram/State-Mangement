@@ -28,8 +28,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_sm/provider/example_one_provider.dart';
 import 'package:provider_sm/provider/favourite_provider.dart';
-
-import 'package:provider_sm/screens/favourite/favourite_screen.dart';
+import 'package:provider_sm/provider/theme_changer_provider.dart';
+import 'package:provider_sm/screens/dark_theme.dart';
 
 import 'provider/count_provider.dart';
 
@@ -43,22 +43,35 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          create: (context) => CountProvider(),
-        ),
-        ChangeNotifierProvider(
-          create: (_) => ExampleOneProvider(),
-        ),
-        ChangeNotifierProvider(create: (_) => FavouriteItemProvider())
-      ],
-      child: MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: const FavouriteScreen(),
-      ),
-    );
+        providers: [
+          ChangeNotifierProvider(
+            create: (_) => CountProvider(),
+          ),
+          ChangeNotifierProvider(
+            create: (_) => ExampleOneProvider(),
+          ),
+          ChangeNotifierProvider(create: (_) => FavouriteItemProvider()),
+          ChangeNotifierProvider(create: (_) => ThemeChanger()),
+        ],
+        child: Builder(
+          builder: (context) {
+            final themeChanger = Provider.of<ThemeChanger>(context);
+            return MaterialApp(
+              title: 'Flutter Demo',
+              themeMode: themeChanger.themeMode,
+              theme: ThemeData(
+                brightness: Brightness.light,
+                primarySwatch: Colors.red,
+              ),
+              darkTheme: ThemeData(
+                brightness: Brightness.dark,
+                primarySwatch: Colors.brown,
+                primaryColor: Colors.purple,
+                iconTheme: IconThemeData(color: Colors.pink),
+              ),
+              home: const DarkThemeScreen(),
+            );
+          },
+        ));
   }
 }
