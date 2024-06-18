@@ -65,7 +65,7 @@ class GamePage extends StatelessWidget {
   Widget _questionText() {
     return Text(
       _pageProvider!.getCurrentQuestionText(),
-      style: TextStyle(
+      style: const TextStyle(
           fontSize: 25, color: Colors.white, fontWeight: FontWeight.w400),
     );
   }
@@ -78,7 +78,7 @@ class GamePage extends StatelessWidget {
       color: Colors.green,
       minWidth: _deviceWidth! * 0.80,
       height: _deviceHeight! * 0.10,
-      child: Text(
+      child: const Text(
         'True',
         style: TextStyle(color: Colors.white, fontSize: 25),
       ),
@@ -93,7 +93,7 @@ class GamePage extends StatelessWidget {
       color: Colors.red,
       minWidth: _deviceWidth! * 0.80,
       height: _deviceHeight! * 0.10,
-      child: Text(
+      child: const Text(
         'False',
         style: TextStyle(color: Colors.white, fontSize: 25),
       ),
