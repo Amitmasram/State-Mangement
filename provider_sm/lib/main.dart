@@ -29,7 +29,8 @@ import 'package:provider/provider.dart';
 import 'package:provider_sm/provider/example_one_provider.dart';
 import 'package:provider_sm/provider/favourite_provider.dart';
 import 'package:provider_sm/provider/theme_changer_provider.dart';
-import 'package:provider_sm/screens/dark_theme.dart';
+
+import 'package:provider_sm/screens/value_notify_listner.dart';
 
 import 'provider/count_provider.dart';
 
@@ -65,7 +66,7 @@ class MyApp extends StatelessWidget {
               primaryColor: Colors.purple,
               iconTheme: const IconThemeData(color: Colors.pink),
             ),
-            home: const DarkThemeScreen(),
+            home: NotifyListenerScreen(),
           );
         },
       ),
