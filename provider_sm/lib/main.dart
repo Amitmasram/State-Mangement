@@ -32,8 +32,6 @@ import 'package:provider_sm/provider/favourite_provider.dart';
 import 'package:provider_sm/provider/theme_changer_provider.dart';
 import 'package:provider_sm/screens/login_example.dart';
 
-import 'package:provider_sm/screens/value_notify_listner.dart';
-
 import 'provider/count_provider.dart';
 
 void main() {
