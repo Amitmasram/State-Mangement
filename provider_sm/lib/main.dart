@@ -43,35 +43,32 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-        providers: [
-          ChangeNotifierProvider(
-            create: (_) => CountProvider(),
-          ),
-          ChangeNotifierProvider(
-            create: (_) => ExampleOneProvider(),
-          ),
-          ChangeNotifierProvider(create: (_) => FavouriteItemProvider()),
-          ChangeNotifierProvider(create: (_) => ThemeChanger()),
-        ],
-        child: Builder(
-          builder: (context) {
-            final themeChanger = Provider.of<ThemeChanger>(context);
-            return MaterialApp(
-              title: 'Flutter Demo',
-              themeMode: themeChanger.themeMode,
-              theme: ThemeData(
-                brightness: Brightness.light,
-                primarySwatch: Colors.red,
-              ),
-              darkTheme: ThemeData(
-                brightness: Brightness.dark,
-                primarySwatch: Colors.brown,
-                primaryColor: Colors.purple,
-                iconTheme: IconThemeData(color: Colors.pink),
-              ),
-              home: const DarkThemeScreen(),
-            );
-          },
-        ));
+      providers: [
+        ChangeNotifierProvider(create: (_) => CountProvider()),
+        ChangeNotifierProvider(create: (_) => ExampleOneProvider()),
+        ChangeNotifierProvider(create: (_) => FavouriteItemProvider()),
+        ChangeNotifierProvider(create: (_) => ThemeChanger()),
+      ],
+      child: Builder(
+        builder: (context) {
+          final themeChanger = Provider.of<ThemeChanger>(context);
+          return MaterialApp(
+            title: 'Flutter Demo',
+            themeMode: themeChanger.themeMode,
+            theme: ThemeData(
+              brightness: Brightness.light,
+              primarySwatch: Colors.red,
+            ),
+            darkTheme: ThemeData(
+              brightness: Brightness.dark,
+              primarySwatch: Colors.brown,
+              primaryColor: Colors.purple,
+              iconTheme: const IconThemeData(color: Colors.pink),
+            ),
+            home: const DarkThemeScreen(),
+          );
+        },
+      ),
+    );
   }
 }
