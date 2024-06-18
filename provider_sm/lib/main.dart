@@ -26,9 +26,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:provider_sm/provider/auth_provider.dart';
 import 'package:provider_sm/provider/example_one_provider.dart';
 import 'package:provider_sm/provider/favourite_provider.dart';
 import 'package:provider_sm/provider/theme_changer_provider.dart';
+import 'package:provider_sm/screens/login_example.dart';
 
 import 'package:provider_sm/screens/value_notify_listner.dart';
 
@@ -49,6 +51,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => ExampleOneProvider()),
         ChangeNotifierProvider(create: (_) => FavouriteItemProvider()),
         ChangeNotifierProvider(create: (_) => ThemeChanger()),
+        ChangeNotifierProvider(create: (_) => AuthProvider()),
       ],
       child: Builder(
         builder: (context) {
@@ -66,7 +69,7 @@ class MyApp extends StatelessWidget {
               primaryColor: Colors.purple,
               iconTheme: const IconThemeData(color: Colors.pink),
             ),
-            home: NotifyListenerScreen(),
+            home: const LoginScreen(),
           );
         },
       ),
