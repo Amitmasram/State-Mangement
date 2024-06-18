@@ -13,6 +13,7 @@ class _DarkThemeScreenState extends State<DarkThemeScreen> {
   @override
   Widget build(BuildContext context) {
     // Using Provider.of with listen set to true to rebuild the widget when the themeMode changes
+    // ignore: unused_local_variable
     final themeChanger = Provider.of<ThemeChanger>(context, listen: false);
     print("build");
     return Scaffold(
