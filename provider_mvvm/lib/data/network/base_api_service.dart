@@ -11,9 +11,5 @@ abstract class BaseApiServices {
   Future<dynamic> getApiResponse(String url);
 
   /// Sends data to the specified URL using a POST request.
-  ///
-  /// [url] is the URL to send the POST request to.
-  /// [data] is the data to be sent in the request body.
-  /// Returns a `Future` that completes with the response data.
   Future<dynamic> postApiResponse(String url, dynamic data);
 }

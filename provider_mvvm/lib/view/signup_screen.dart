@@ -2,21 +2,20 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import 'package:provider_mvvm/resources/components/round_button.dart';
 import 'package:provider_mvvm/utils/routes/routes_name.dart';
 
-import 'package:provider_mvvm/utils/utils.dart';
-import 'package:provider_mvvm/view-model/auth_view_model.dart';
+import '../resources/components/round_button.dart';
+import '../utils/utils.dart';
+import '../view-model/auth_view_model.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignUpView extends StatefulWidget {
+  const SignUpView({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUpView> createState() => _SignUpViewState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpViewState extends State<SignUpView> {
   final ValueNotifier<bool> _obscurePassword = ValueNotifier<bool>(true);
 
   TextEditingController emailController = TextEditingController();
@@ -43,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
-          title: const Text("Login", style: TextStyle(color: Colors.white)),
+          title: const Text("Sign Up", style: TextStyle(color: Colors.white)),
           centerTitle: true,
           automaticallyImplyLeading: false,
         ),
@@ -107,8 +106,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             }),
                         SizedBox(height: height * 0.05),
                         RoundButton(
-                          title: 'Login',
-                          loading: authViewModel.loading,
+                          title: 'Sign Up',
+                          loading: authViewModel.signupLoading,
                           onPress: () {
                             if (emailController.text.isEmpty) {
                               Utils.toastMessage("Email cannot be empty");
@@ -122,7 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 'email': emailController.text.toString(),
                                 'password': passwordController.text.toString(),
                               };
-                              authViewModel.loginApi(data, context);
+                              authViewModel.signupApi(data, context);
                               print('data : ${data.toString()}');
                               print('api hit');
                             }
@@ -130,11 +129,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         SizedBox(height: height * 0.05),
                         InkWell(
-                            onTap: () {
-                              Navigator.pushNamed(context, RoutesName.signup);
-                            },
-                            child:
-                                const Text('Don\'t have an account? Sign up')),
+                          onTap: () {
+                            Navigator.pushNamed(context, RoutesName.login);
+                          },
+                          child:
+                              const Text(' Already have an account ? SignIn'),
+                        ),
                       ]),
                 ),
               ),

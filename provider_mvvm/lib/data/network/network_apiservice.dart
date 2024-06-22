@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:provider_mvvm/data/app_exceptions.dart';
@@ -21,9 +22,11 @@ class NetworkApiService extends BaseApiServices {
     dynamic responseJson;
     try {
       final response =
-          await http.get(Uri.parse(url)).timeout(Duration(seconds: 10));
+          await http.get(Uri.parse(url)).timeout(const Duration(seconds: 10));
       responseJson = returnResponse(response);
-      print(url);
+      if (kDebugMode) {
+        print(url);
+      }
     } on SocketException catch (_) {
       throw FetchDataException("No Internet Connection");
     }
@@ -41,9 +44,11 @@ class NetworkApiService extends BaseApiServices {
     try {
       Response response = await http
           .post(Uri.parse(url), body: data)
-          .timeout(Duration(seconds: 10));
+          .timeout(const Duration(seconds: 10));
       responseJson = returnResponse(response);
-      print(url);
+      if (kDebugMode) {
+        print(url);
+      }
     } on SocketException catch (_) {
       throw FetchDataException("No Internet Connection");
     }

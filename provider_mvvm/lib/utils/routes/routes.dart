@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider_mvvm/utils/routes/routes_name.dart';
 import 'package:provider_mvvm/view/login_screen.dart';
+import 'package:provider_mvvm/view/signup_screen.dart';
 
 import '../../view/home_screen.dart';
 import '../../view/splash_screen.dart';
@@ -28,6 +29,8 @@ class Routes {
         return MaterialPageRoute(builder: (context) => const LoginScreen());
       case RoutesName.home:
         return MaterialPageRoute(builder: (context) => const HomeScreen());
+      case RoutesName.signup:
+        return MaterialPageRoute(builder: (context) => const SignUpView());
 
       // If no route is defined, return a MaterialPageRoute with a default screen
       default:

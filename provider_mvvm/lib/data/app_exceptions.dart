@@ -1,5 +1,7 @@
 // This class represents an exception that can be thrown in the app.
 // It takes an optional message and prefix as parameters.
+// ignore_for_file: prefer_typing_uninitialized_variables
+
 class AppException implements Exception {
   final _message; // The message associated with the exception
   final _prefix; // The prefix to be added to the message
